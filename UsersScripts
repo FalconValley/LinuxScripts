@@ -1,0 +1,16 @@
+How do you disable Ubuntu from asking you for a password for every little thing?
+Note:- Disabling password prompts might be a security risk
+
+Open the terminal window from Applications --> accessories --> terminal, run the command:
+
+sudo visudo
+
+Find the line that says
+
+%admin ALL=(ALL) ALL
+
+and change it to
+
+%admin ALL=(ALL) NOPASSWD: ALL
+
+Save and exit the file
